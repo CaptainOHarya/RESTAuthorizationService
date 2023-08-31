@@ -1,5 +1,7 @@
 package ru.netology.autorizationservice.model;
 
+import jakarta.validation.constraints.*;
+import org.springframework.validation.annotation.Validated;
 import ru.netology.autorizationservice.authorities.Authorities;
 
 import java.util.List;
@@ -7,7 +9,12 @@ import java.util.Map;
 import java.util.Objects;
 
 public class User {
+    @NotBlank
+    @Size(min = 3, max = 20)
     private String name;
+    @NotNull
+    @NotBlank
+    @Size(min = 3)
     private String password;
 
     public User() {

@@ -22,12 +22,15 @@ public class UserRepository {
         User alienKesha = new User("ИнопланетянинКеша", "LOM");
         User banni = new User("БанниКарвахаль", "forward");
         User ivanO = new User("Олень1987", "kdfg");
+        User error1 = new User("Vitya", "kh");
+        User error2 = new User("Petya", "");
 
         listUser.put(katya, Arrays.asList(Authorities.values()));
         listUser.put(marina, Arrays.asList(Authorities.values()));
         listUser.put(alienKesha, Arrays.asList(Authorities.READ));
         listUser.put(banni, Arrays.asList(Authorities.READ, Authorities.WRITE));
         listUser.put(ivanO, Arrays.asList(Authorities.DELETE));
+        listUser.put(error1, Arrays.asList(Authorities.DELETE));
 
     }
     public List<Authorities> getUserAuthorities(String user, String password) {
