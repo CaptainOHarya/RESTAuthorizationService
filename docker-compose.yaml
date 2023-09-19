@@ -1,0 +1,8 @@
+version:  '5.55'
+
+services:
+  authorizationService:
+    build: "."
+    image: 'authorizationapp:1.0'
+    ports:
+      - '8080:11111'
